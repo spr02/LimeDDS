@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "limesdrconfig.h"
+#include "limeddsconfig.h"
 #include "siggenproducer.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -13,16 +14,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     //make new lime sdr device
-    LimeSDR = new LimeSDRDevice();
+    //LimeSDR = new LimeSDRDevice();
+    LimeSDR = new LimeDDS();
 
-
-    //setup configurator
+    //setup configurator for DDS
     LimeConfigureUI = new LimeSDRConfig();
     LimeConfigureUI->show();
     LimeConfigureUI->setDevPtr(LimeSDR);
     //QObject::connect(LimeConfigureUI, SIGNAL(stop_consumer()), SLOT(stopFFT()));    //stop signal is emitted, when stop button is clicked
     //QObject::connect(LimeConfigureUI, SIGNAL(stop_producer()), SLOT(stopSigGen()));
 
+    //setup configurator for DDS core
+    DDSConfigureUI = new limeddsconfig();
+    DDSConfigureUI->show();
+    DDSConfigureUI->setDevPtr(LimeSDR);
 
     //make sig gen producer + thread
     m_sine_gen_thread = new QThread();

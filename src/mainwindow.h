@@ -11,9 +11,11 @@
 #include <libalglib/fasttransforms.h>
 
 #include "limesdrconfig.h"
+#include "limeddsconfig.h"
 #include "limesdrdevice.h"
 #include "siggenproducer.h"
 #include "fftconsumer.h"
+#include "limedds.h"
 
 
 namespace Ui {
@@ -36,7 +38,8 @@ public slots:
 private:
     Ui::MainWindow *ui;
     LimeSDRConfig *LimeConfigureUI;
-    LimeSDRDevice *LimeSDR;
+    limeddsconfig *DDSConfigureUI;
+    LimeDDS *LimeSDR;
 
     //signal generator (producer)
     QThread* m_sine_gen_thread;

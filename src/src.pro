@@ -34,7 +34,9 @@ SOURCES += \
     limerxstreamworker.cpp \
     limetxstreamworker.cpp \
     siggenproducer.cpp \
-    fftconsumer.cpp
+    fftconsumer.cpp \
+    limedds.cpp \
+    limeddsconfig.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,11 +46,15 @@ HEADERS += \
     limerxstreamworker.h \
     limetxstreamworker.h \
     siggenproducer.h \
-    fftconsumer.h
+    fftconsumer.h \
+    limedds.h \
+    dds_regs.h \
+    limeddsconfig.h
 
 FORMS += \
         mainwindow.ui \
-    limesdrconfig.ui
+    limesdrconfig.ui \
+    limeddsconfig.ui
 
 
 

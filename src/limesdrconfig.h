@@ -12,6 +12,7 @@
 #include <SoapySDR/Formats.hpp>
 
 #include "limesdrdevice.h"
+#include "limedds.h"
 
 namespace Ui {
 class LimeSDRConfig;
@@ -27,8 +28,8 @@ public:
     ~LimeSDRConfig();
 
     //setter method for the device pointer
-    void setDevPtr(LimeSDRDevice* p_dev);
-    LimeSDRDevice* getDevPtr (void);
+    void setDevPtr(LimeDDS* p_dev);
+    LimeDDS* getDevPtr (void);
 
 
 private slots:
@@ -99,7 +100,7 @@ private:
 
     //arglist and actual sdr pointer
     SoapySDR::KwargsList devicesKwargs;
-    LimeSDRDevice* m_sdr_dev;
+    LimeDDS* m_sdr_dev;
 
     //timer to update the rate + progress and current head + tail
     QTimer *m_update_timer;

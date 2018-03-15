@@ -76,6 +76,17 @@ void LimeSDRConfig::update_rate (void)
 
 
 //////////////////// setter and getter for device pointer ////////////////////
+LimeDDS* LimeSDRConfig::getDevPtr (void)
+{
+    return m_sdr_dev;
+}
+
+void LimeSDRConfig::setDevPtr(LimeDDS* p_dev)
+{
+    m_sdr_dev = p_dev;
+}
+
+#if 0
 LimeSDRDevice* LimeSDRConfig::getDevPtr (void)
 {
     return m_sdr_dev;
@@ -85,7 +96,7 @@ void LimeSDRConfig::setDevPtr(LimeSDRDevice* p_dev)
 {
     m_sdr_dev = p_dev;
 }
-
+#endif
 
 //////////////////// SLOTS for buttons and value changed ////////////////////
 

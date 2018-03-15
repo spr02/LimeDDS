@@ -323,7 +323,7 @@
         <item row="0" column="1" colspan="2">
          <widget class="QComboBox" name="rx_antenna_combo">
           <property name="currentText">
-           <string>NONE</string>
+           <string>LNAL</string>
           </property>
           <item>
            <property name="text">
@@ -883,7 +883,7 @@
            <string/>
           </property>
           <property name="text">
-           <string> </string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -896,7 +896,7 @@
            <string/>
           </property>
           <property name="text">
-           <string> </string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
