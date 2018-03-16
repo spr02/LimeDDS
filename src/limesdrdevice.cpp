@@ -137,7 +137,7 @@ void LimeSDRDevice::connect(QString p_argStr)
     m_sdr_dev->setSampleRate(SOAPY_SDR_TX, 0, 5.0e6);
     m_sdr_dev->setFrequency(SOAPY_SDR_TX, 0, 106.0e6);
     m_sdr_dev->setAntenna(SOAPY_SDR_TX, 0, "BAND1"); //set to BAND1 for calibration
-    m_sdr_dev->setGain(SOAPY_SDR_TX, 0, "PAD", -30);
+    m_sdr_dev->setGain(SOAPY_SDR_TX, 0, "PAD", 10);
     m_sdr_dev->setBandwidth(SOAPY_SDR_TX, 0, 30000000.0);
 
 
@@ -159,7 +159,7 @@ void LimeSDRDevice::connect(QString p_argStr)
 
     m_connected = true;
 
-     m_sdr_dev->setAntenna(SOAPY_SDR_TX, 0, "NONE"); //set to suppress LO leakage
+    m_sdr_dev->setAntenna(SOAPY_SDR_TX, 0, "NONE"); //set to suppress LO leakage
 /*
     const int reg_addr_fpga = 26;
     const int led_val = (3<<3); //set FPGA_LED2_CTRL to 101
